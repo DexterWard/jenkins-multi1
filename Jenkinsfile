@@ -10,7 +10,7 @@ pipeline {
                 }
                 axis{
                     name 'BROWSER'
-                    value 'Chrome','Edge','Firefox'
+                    values 'Chrome','Edge','Firefox'
                 }
             }
                 agent { 
