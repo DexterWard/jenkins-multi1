@@ -17,7 +17,6 @@ pipeline {
                     name 'BROWSER'
                     values 'Chrome','Firefox','Edge'
                  }
-              }
             }           
             agent { 
                     label "${OS}" // Wue use agents with labels 'linux' o 'windows'
@@ -40,6 +39,7 @@ pipeline {
                                 echo "Cleaning up environment on ${OS} after running tests on ${BROWSER}"                       
                         }
                     }                
+            }
             }
         }
     }
