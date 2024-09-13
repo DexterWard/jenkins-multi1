@@ -15,7 +15,7 @@ pipeline {
                  axis
                  {
                     name 'BROWSER'
-                    values 'Chrome','Firefox'',Edge'
+                    values 'Chrome','Firefox','Edge'
                  }
               }
             }           
