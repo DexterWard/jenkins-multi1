@@ -1,23 +1,29 @@
 pipeline {
     agent none
     stages {
-        stage('Run Tests on Multiple Configurations') {
-            matrix{
-              axes{
-                 axis{
+        stage('Run Tests on Multiple Configurations') 
+        {
+            matrix
+            {
+              axes
+              {
+                 axis
+                 {
                     name 'OS'
                     values 'linux', 'windows'
                  }
-                 axis{
+                 axis
+                 {
                     name 'BROWSER'
                     values 'Chrome','Firefox'',Edge'
                  }
               }
             }           
-                agent { 
+            agent { 
                     label "${OS}" // Wue use agents with labels 'linux' o 'windows'
-                }
-                stages {
+            }
+            stages 
+            {
                     stage('Prepare Environment') {
                           steps {                       
                                 echo "Preparing environment on ${OS} for ${BROWSER} tests"
@@ -33,8 +39,7 @@ pipeline {
                         steps {
                                 echo "Cleaning up environment on ${OS} after running tests on ${BROWSER}"                       
                         }
-                    }
-                }
+                    }                
             }
         }
     }
