@@ -18,9 +18,7 @@ pipeline {
                     values 'Chrome','Firefox','Edge'
                  }
             }           
-            agent { 
-                    label "${OS}" // We use agents with labels 'linux' or 'windows'
-            }
+            agent any
             stages 
             {
                     stage('Prepare Environment') {
