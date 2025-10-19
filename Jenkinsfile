@@ -19,7 +19,7 @@ pipeline {
                  }
             }           
             agent { 
-                    label "${OS}" // Wue use agents with labels 'linux' o 'windows'
+                    label "${OS}" // We use agents with labels 'linux' or 'windows'
             }
             stages 
             {
